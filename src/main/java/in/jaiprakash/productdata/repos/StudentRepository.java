@@ -21,7 +21,7 @@ public interface StudentRepository extends CrudRepository<Student, Long> {
     @Query("from Student where firstName=:firstName")
     List<Student> findAllStudentsByFirstName(@Param("firstName") String firstName);
 
-    // Adding Paging and sorting change 1
+    // Adding Paging and sorting
     @Query("from Student")
     List<Student> findAllStudents(Pageable pageable);
 }
