@@ -18,6 +18,7 @@ public interface StudentRepository extends CrudRepository<Student, Long> {
     @Query("select st.firstName,st.lastName from Student st")
     List<Object[]> findAllStudentsPartialData();
 
+    // change 2
     @Query("from Student where firstName=:firstName")
     List<Student> findAllStudentsByFirstName(@Param("firstName") String firstName);
 
