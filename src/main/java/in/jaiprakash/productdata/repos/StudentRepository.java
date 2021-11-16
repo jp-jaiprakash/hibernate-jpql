@@ -15,7 +15,6 @@ public interface StudentRepository extends CrudRepository<Student, Long> {
     @Query("from Student")
     List<Student> findAllStudents();
 
-    // change 3
     @Query("select st.firstName,st.lastName from Student st")
     List<Object[]> findAllStudentsPartialData();
 
